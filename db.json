@@ -1,0 +1,301 @@
+{
+  "videos": [
+    {
+      "id": 1,
+      "title": "Marketing de Conversão: O Que é e 29 Dicas Práticas",
+      "data_create": "2023-06-30",
+      "thumbnail": "assets/images-thumbnail.png",
+      "video": "kvZxxVLApxw",
+      "tag": "Geração de Leads",
+      "tag_slug": "geracao-de-leads"
+    },
+    {
+      "id": 2,
+      "title": "16 Melhores Práticas de Geração de Leads para Agências",
+      "data_create": "2023-06-25",
+      "thumbnail": "assets/images-thumbnail.png",
+      "video": "a89Htfx0YKo",
+      "tag": "Geração de Leades",
+      "tag_slug": "geracao-de-leads"
+    },
+    {
+      "id": 3,
+      "title": "Mercado Educacional Brasileiro: 9 Dados Sobre Geração de Leads",
+      "data_create": "2023-05-30",
+      "thumbnail": "assets/images-thumbnail.png",
+      "video": "WG0taidKKHY",
+      "tag": "Geração de Leades",
+      "tag_slug": "geracao-de-leads"
+    },
+    {
+      "id": 4,
+      "title": "17 Casos de Uso de Chatbots pra Entender Como Eles Funcionam",
+      "data_create": "2023-06-30",
+      "thumbnail": "assets/images-thumbnail.png",
+      "video": "VZoPJxdu20c",
+      "tag": "marketing digital",
+      "tag_slug": "marketing-digital"
+    },
+    {
+      "id": 5,
+      "title": "15 Exemplos de Landing Pages SaaS e Como Construir a Sua",
+      "data_create": "2022-06-30",
+      "thumbnail": "assets/images-thumbnail.png",
+      "video": "assets/images-thumbnail.png",
+      "tag": "marketing digital",
+      "tag_slug": "marketing-digital"
+    },
+    {
+      "id": 6,
+      "title": "Como Usar o ChatGPT? 10 Usos Simples e 7 Comandos Avançados",
+      "data_create": "2023-07-02",
+      "thumbnail": "assets/images-thumbnail.png",
+      "video": "assets/images-thumbnail.png",
+      "tag": "marketing digital",
+      "tag_slug": "marketing-digital"
+    },
+    {
+      "id": 7,
+      "title": "Agências: 4 Argumentos para Vender a Leadster para um Cliente",
+      "data_create": "2023-07-01",
+      "thumbnail": "assets/images-thumbnail.png",
+      "video": "assets/images-thumbnail.png",
+      "tag": "Agências",
+      "tag_slug": "agencias"
+    },
+    {
+      "id": 8,
+      "title": "Como Abordar um Lead em Qualquer Etapa do Funil",
+      "data_create": "2023-07-02",
+      "thumbnail": "assets/images-thumbnail.png",
+      "video": "assets/images-thumbnail.png",
+      "tag": "Geração de Leads",
+      "tag_slug": "geracao-de-leads"
+    },
+    {
+      "id": 9,
+      "title": "Funcionalidades Leadster: Gere + Leads Qualificados com ChatGPT",
+      "data_create": "2023-07-02",
+      "thumbnail": "assets/images-thumbnail.png",
+      "video": "assets/images-thumbnail.png",
+      "tag": "GERAÇÂO DE LEADS",
+      "tag_slug": "geracao-de-leads"
+    },
+    {
+      "id": 10,
+      "title": "Como Usar o ChatGPT? 10 Usos Simples e 7 Comandos Avançados",
+      "data_create": "2023-06-02",
+      "thumbnail": "assets/images-thumbnail.png",
+      "video": "assets/images-thumbnail.png",
+      "tag": "GERAÇÂO DE LEADS",
+      "tag_slug": "geracao-de-leads"
+    },
+    {
+      "id": 11,
+      "title": "Como Calcular o ROI de uma Campanha ou Estratégia de Marketing?",
+      "data_create": "2023-04-02",
+      "thumbnail": "assets/images-thumbnail.png",
+      "video": "assets/images-thumbnail.png",
+      "tag": "Agências",
+      "tag_slug": "agencias"
+    },
+    {
+      "id": 12,
+      "title": "Experiência do Consumidor Digital: 5 Traços e 10 Dicas",
+      "data_create": "2023-06-16",
+      "thumbnail": "assets/images-thumbnail.png",
+      "video": "assets/images-thumbnail.png",
+      "tag": "marketing digital",
+      "tag_slug": "marketing-digital"
+    },
+    {
+      "id": 13,
+      "title": "Como Montar uma Agência de Comunicação? Do Zero ao Milhão",
+      "data_create": "2023-07-02",
+      "thumbnail": "assets/images-thumbnail.png",
+      "video": "assets/images-thumbnail.png",
+      "tag": "Agências",
+      "tag_slug": "agencias"
+    },
+    {
+      "id": 14,
+      "title": "10 Melhores Chatbots para WordPress em 2023",
+      "data_create": "2023-07-02",
+      "thumbnail": "assets/images-thumbnail.png",
+      "video": "assets/images-thumbnail.png",
+      "tag": "Chatbot",
+      "tag_slug": "chatbot"
+    },
+    {
+      "id": 14,
+      "title": "8 Estatísticas do Mercado Brasileiro de Software",
+      "data_create": "2023-03-15",
+      "thumbnail": "assets/images-thumbnail.png",
+      "video": "assets/images-thumbnail.png",
+      "tag": "Geração de Leads",
+      "tag_slug": "geracao-de-leads"
+    },
+    {
+      "id": 15,
+      "title": "Como Chatbots podem Resolver Grandes Desafios do Marketing B2B",
+      "data_create": "2023-03-27",
+      "thumbnail": "assets/images-thumbnail.png",
+      "video": "assets/images-thumbnail.png",
+      "tag": "Chatbot",
+      "tag_slug": "chatbot"
+    },
+    {
+      "id": 16,
+      "title": "Product Market Fit: 10 Estratégias para Start-ups",
+      "data_create": "2023-02-12",
+      "thumbnail": "assets/images-thumbnail.png",
+      "video": "assets/images-thumbnail.png",
+      "tag": "marketing digital",
+      "tag_slug": "marketing-digital"
+    },
+    {
+      "id": 17,
+      "title": "Leadster Lança Novo Estudo sobre o Mercado de Geração de Leads no Brasil",
+      "data_create": "2023-07-02",
+      "thumbnail": "assets/images-thumbnail.png",
+      "video": "assets/images-thumbnail.png",
+      "tag": "Geração de Leads",
+      "tag_slug": "geracao-de-leads"
+    },
+    {
+      "id": 18,
+      "title": "Por que muitos Clientes Preferem Chatbots a Vendedores?",
+      "data_create": "2023-07-02",
+      "thumbnail": "assets/images-thumbnail.png",
+      "video": "assets/images-thumbnail.png",
+      "tag": "Chatbot",
+      "tag_slug": "chatbot"
+    },
+    {
+      "id": 19,
+      "title": "Inteligência Artificial no Marketing Digital – 30 Casos de Uso",
+      "data_create": "2023-05-05",
+      "thumbnail": "assets/images-thumbnail.png",
+      "video": "assets/images-thumbnail.png",
+      "tag": "marketing digital",
+      "tag_slug": "marketing-digital"
+    },
+    {
+      "id": 20,
+      "title": "ChatGPT: Um Estudo Completo – O que é e Como Usar no Marketing Digital",
+      "data_create": "2023-07-02",
+      "thumbnail": "assets/images-thumbnail.png",
+      "video": "assets/images-thumbnail.png",
+      "tag": "Chatbot",
+      "tag_slug": "chatbot"
+    },
+    {
+      "id": 21,
+      "title": "10 Ferramentas de Produção de Conteúdo para Usar Hoje",
+      "data_create": "2023-07-02",
+      "thumbnail": "assets/images-thumbnail.png",
+      "video": "assets/images-thumbnail.png",
+      "tag": "Mídia Paga",
+      "tag_slug": "midia-paga"
+    },
+    {
+      "id": 22,
+      "title": "Como Aumentar o Faturamento de uma Agência de Marketing?",
+      "data_create": "2023-07-02",
+      "thumbnail": "assets/images-thumbnail.png",
+      "video": "assets/images-thumbnail.png",
+      "tag": "Agências",
+      "tag_slug": "agencias"
+    },
+    {
+      "id": 23,
+      "title": "O que é Marketing de Performance, Como Usar e 6 Exemplos",
+      "data_create": "2023-06-22",
+      "thumbnail": "assets/images-thumbnail.png",
+      "video": "assets/images-thumbnail.png",
+      "tag": "Mídia Paga",
+      "tag_slug": "midia-paga"
+    },
+    {
+      "id": 24,
+      "title": "Atendimento Comercial: O que é e Como Usá-lo para Vender Mais",
+      "data_create": "2023-06-21",
+      "thumbnail": "assets/images-thumbnail.png",
+      "video": "assets/images-thumbnail.png",
+      "tag": "Mídia Paga",
+      "tag_slug": "midia-paga"
+    },
+    {
+      "id": 25,
+      "title": "Unique Selling Proposition: O que é, Vantagens e Como Criar",
+      "data_create": "2023-02-09",
+      "thumbnail": "assets/images-thumbnail.png",
+      "video": "assets/images-thumbnail.png",
+      "tag": "Mídia Paga",
+      "tag_slug": "midia-paga"
+    },
+    {
+      "id": 26,
+      "title": "Rede de Display do Google: Aprenda o que é e Como Fazer",
+      "data_create": "2022-12-24",
+      "thumbnail": "assets/images-thumbnail.png",
+      "video": "assets/images-thumbnail.png",
+      "tag": "Mídia Paga",
+      "tag_slug": "midia-paga"
+    },
+    {
+      "id": 27,
+      "title": "100 Frases de Marketing para te Inspirar Hoje",
+      "data_create": "2023-07-02",
+      "thumbnail": "assets/images-thumbnail.png",
+      "video": "assets/images-thumbnail.png",
+      "tag": "marketing digital",
+      "tag_slug": "marketing-digital"
+    },
+    {
+      "id": 28,
+      "title": "Como Gerar Leads de Vendas e Convertê-los mais",
+      "data_create": "2023-02-07",
+      "thumbnail": "assets/images-thumbnail.png",
+      "video": "assets/images-thumbnail.png",
+      "tag": "Geração de Leads",
+      "tag_slug": "geracao-de-leads"
+    },
+    {
+      "id": 29,
+      "title": "6 Exemplos de Briefing para Download Grátis",
+      "data_create": "2023-07-02",
+      "thumbnail": "assets/images-thumbnail.png",
+      "video": "assets/images-thumbnail.png",
+      "tag": "Agências",
+      "tag_slug": "agencias"
+    },
+    {
+      "id": 30,
+      "title": "200 Nomes para Agência de Marketing [originais]",
+      "data_create": "2023-06-13",
+      "thumbnail": "assets/images-thumbnail.png",
+      "video": "assets/images-thumbnail.png",
+      "tag": "Agências",
+      "tag_slug": "agencias"
+    },
+    {
+      "id": 31,
+      "title": "Como Criar Link do WhatsApp Grátis",
+      "data_create": "2023-07-02",
+      "thumbnail": "assets/images-thumbnail.png",
+      "video": "assets/images-thumbnail.png",
+      "tag": "Geração de Leads",
+      "tag_slug": "geracao-de-leads"
+    },
+    {
+      "id": 32,
+      "title": "A Metodologia Esquecida para Aumentar a Geração de Leads",
+      "data_create": "2023-07-02",
+      "thumbnail": "assets/images-thumbnail.png",
+      "video": "assets/images-thumbnail.png",
+      "tag": "Geração de Leads",
+      "tag_slug": "geracao-de-leads"
+    }
+  ]
+}
