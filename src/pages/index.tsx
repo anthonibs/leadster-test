@@ -10,7 +10,8 @@ import Banner from '@src/components/Banner';
 import BannerFooter from '@src/components/Banner/BannerFooter';
 import Card from '@src/components/Card';
 import SkeletonCustom from '@src/components/SkeletonCustom';
-import Tags from './Tags';
+import Tags from '../components/Tags';
+import ModalOverlay from '@src/components/ModalOverlay';
 
 const Home = () => {
   const [videoPost, setVideoPost] = useState<IVideoPost[]>([]);
@@ -20,6 +21,8 @@ const Home = () => {
   const [tags, setTags] = useState<IVideoPost[]>([]);
   const [selectedTag, setSelectedTag] = useState('');
   const [selectedDate, setSelectedDate] = useState('');
+  const [openModal, setOpenModal] = useState<boolean>(false);
+  const [propertyData, setPropertyData] = useState({} as IVideoPost);
 
   const fetchVideoPost = useCallback(async () => {
     try {
@@ -92,6 +95,8 @@ const Home = () => {
     <main>
       <Banner />
 
+      <ModalOverlay propertyData={propertyData} openModal={openModal} setOpenModal={setOpenModal} />
+
       <S.ContainerSection>
         <header className='filter-header'>
           <Tags tags={uniqueTags} selectedTag={selectedTag} handleSelectedTag={handleSelectedTag} />
@@ -113,7 +118,15 @@ const Home = () => {
 
         <S.Grid>
           {!loading
-            ? filterPost.map((data) => <Card key={`${data.id}-${data.tag_slug}`} data={data} />)
+            ? filterPost.map((data) => (
+                <Card
+                  key={`${data.id}-${data.tag_slug}`}
+                  data={data}
+                  openModal={openModal}
+                  setOpenModal={setOpenModal}
+                  setPropertyData={setPropertyData}
+                />
+              ))
             : Array(9)
                 .fill(9)
                 .map(() => (
