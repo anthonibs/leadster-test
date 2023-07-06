@@ -39,7 +39,7 @@ const ModalOverlay = ({ openModal, setOpenModal, propertyData }: ModalOverlayPro
   }, [openModal]);
 
   return (
-    <S.Container openModal={openModal} ref={modalRef}>
+    <S.Container className={openModal ? 'active' : ''} ref={modalRef}>
       <dialog open={openModal}>
         <header className='dialog-header'>
           <h2>

@@ -1,11 +1,16 @@
-import { styled } from 'styled-components';
+import { keyframes, styled } from 'styled-components';
 
-interface ModalProps {
-  openModal: boolean;
-}
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`;
 
-export const Container = styled.div<ModalProps>`
-  display: ${({ openModal }) => (openModal ? 'flex' : 'none')};
+export const Container = styled.div`
+  display: none;
   align-items: center;
   justify-content: center;
 
@@ -16,6 +21,11 @@ export const Container = styled.div<ModalProps>`
   background-color: rgb(12 100 165 / 20%);
   z-index: 1000;
   top: 0;
+
+  &.active {
+    display: flex;
+    animation: ${fadeIn} 0.3s linear;
+  }
 
   > dialog {
     width: 100%;
