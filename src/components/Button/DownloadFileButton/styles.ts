@@ -7,12 +7,16 @@ interface ButtonProps {
 
 export const Button = styled.button<ButtonProps>`
   appearance: none;
-  cursor: pointer;
-  width: fit-content;
 
   display: flex;
+
   overflow: hidden;
+
+  cursor: pointer;
+
   border-radius: 0.475rem;
+
+  width: fit-content;
 
   &:hover > span {
     background-color: ${({ color }) => darken(0.15, color)};
@@ -24,10 +28,14 @@ export const Button = styled.button<ButtonProps>`
 
   > span {
     display: flex;
+
     background-color: ${({ color }) => darken(0.1, color)};
+
     height: 100%;
-    width: 100%;
+    width: auto;
+
     padding: 0.525rem;
+
     transition: all 2.3s linear;
 
     > svg {
@@ -37,11 +45,13 @@ export const Button = styled.button<ButtonProps>`
 
   > p {
     padding: 0.525rem;
+
+    color: ${({ color }) => darken(0.6, color)};
     font-size: 0.875rem;
     font-weight: 600;
-    transition: all 2.3s linear;
 
     background-color: ${({ color }) => color};
-    color: ${({ color }) => darken(0.6, color)};
+
+    transition: all 2.3s linear;
   }
 `;

@@ -6,10 +6,11 @@ const noCard = 'assets/images/no-card-dark.webp';
 export const Container = styled.section`
   display: flex;
   align-items: center;
-  height: 530px;
-  width: 100%;
 
   background-color: ${({ theme }) => theme.colors.primary};
+
+  height: fit-content;
+  width: 100%;
 
   position: relative;
 
@@ -23,11 +24,13 @@ export const Container = styled.section`
 
     background: url(${mountain});
     background-repeat: no-repeat;
-    background-size: contain;
-    background-position: -350px 60px;
+    background-size: cover;
+    background-position: -550px 60px;
   }
 
   @media (min-width: 1024px) {
+    height: 530px;
+
     &::before {
       background-position: -450px 60px;
     }
@@ -35,28 +38,35 @@ export const Container = styled.section`
 
   @media (min-width: 1300px) {
     &::before {
-      background-position: -350px 60px;
+      background-position: -450px 60px;
     }
   }
 
   @media (min-width: 1600px) {
     &::before {
-      background-position: -100px 60px;
+      background-position: -600px 20px;
     }
   }
 `;
 
 export const Box = styled.div`
   display: flex;
+  flex-direction: column-reverse;
   align-items: center;
   justify-content: center;
 
   height: 100%;
   width: 100%;
-  max-width: 1200px;
+
   margin: 0 auto;
 
   z-index: 100;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+
+    max-width: 1200px;
+  }
 `;
 
 export const Wrapper = styled.div`
@@ -65,27 +75,41 @@ export const Wrapper = styled.div`
   justify-content: center;
 
   height: 100%;
-  width: 50%;
+  width: 100%;
 
-  padding: 2rem;
+  padding: 2rem 1rem;
+
+  @media (min-width: 768px) {
+    width: 50%;
+
+    padding: 2rem;
+  }
 `;
 
 export const Figure = styled.figure`
-  position: relative;
-  top: 20px;
-
-  height: 100%;
+  height: 80%;
   width: 100%;
+
+  @media (min-width: 768px) {
+    position: relative;
+    top: 20px;
+
+    height: 100%;
+  }
 `;
 
 export const Image = styled.img`
   display: block;
 
   object-fit: contain;
-  object-position: right;
 
   height: 100%;
   width: 100%;
+
+  @media (min-width: 768px) {
+    object-fit: contain;
+    object-position: right;
+  }
 `;
 
 export const HeaderTitle = styled.div`
@@ -94,12 +118,13 @@ export const HeaderTitle = styled.div`
   gap: 0.325rem;
 
   border-bottom: 1px solid #e3e5e9;
-
   padding-bottom: 1rem;
   margin-bottom: 1rem;
 
-  h2 {
-    font-size: 1.825rem;
+  text-align: center;
+
+  > h2 {
+    font-size: 1.325rem;
     font-weight: 500;
     color: ${({ theme }) => theme.colors.third};
 
@@ -108,9 +133,22 @@ export const HeaderTitle = styled.div`
     }
   }
 
-  p {
+  > p {
+    font-size: 0.875rem;
     color: ${({ theme }) => theme.colors.third};
     font-weight: 500;
+  }
+
+  @media (min-width: 768px) {
+    text-align: left;
+
+    > h2 {
+      font-size: 1.825rem;
+    }
+
+    > p {
+      font-size: 1rem;
+    }
   }
 `;
 
@@ -128,8 +166,10 @@ export const ControlCTA = styled.div`
     height: 50px;
 
     img {
-      width: 100%;
+      display: block;
+
       height: 100%;
+      width: 100%;
     }
   }
 
@@ -137,6 +177,7 @@ export const ControlCTA = styled.div`
     color: ${({ theme }) => theme.colors.third};
     font-size: 0.875rem;
     font-weight: 500;
+    text-align: center;
   }
 
   .card-icon {
@@ -145,17 +186,31 @@ export const ControlCTA = styled.div`
     &:before {
       content: '';
 
+      display: inline-block;
+
       position: relative;
 
-      margin-right: .3rem;
+      margin-right: 0.3rem;
 
-      display: inline-block;
-      height: 1rem;
-      width: 1rem;
+      height: 0.875rem;
+      width: 0.875rem;
 
       background: url(${noCard});
       background-repeat: no-repeat;
       background-size: cover;
+    }
+  }
+
+  @media (min-width: 768px) {
+    > p {
+      text-align: left;
+    }
+
+    .card-icon {
+      &:before {
+        height: 1rem;
+        width: 1rem;
+      }
     }
   }
 `;
@@ -165,8 +220,7 @@ export const MyButton = styled.button`
 
   border-radius: 50px;
   border: 1px solid ${({ theme }) => theme.colors.secondary};
-
-  padding: 0 2rem;
+  padding: 0 1rem;
 
   color: ${({ theme }) => theme.colors.white};
   font-weight: 600;

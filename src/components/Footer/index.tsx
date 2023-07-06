@@ -18,7 +18,7 @@ const Footer = () => {
 
           <S.Navigation>
             <div aria-labelledby='main-links'>
-              <h2 id='main-links'>Links Principais</h2>
+              <h3 id='main-links'>Links Principais</h3>
               <ul>
                 <li>
                   <Link href={'/'}>Home</Link>
@@ -36,7 +36,7 @@ const Footer = () => {
             </div>
 
             <div aria-labelledby='cases'>
-              <h2 id='cases'>Cases</h2>
+              <h3 id='cases'>Cases</h3>
               <ul>
                 <li>
                   <Link href={'#'}>Geração de Leads B2B</Link>
@@ -54,7 +54,7 @@ const Footer = () => {
             </div>
 
             <div aria-labelledby='materials'>
-              <h2 id='materials'>Materiais</h2>
+              <h3 id='materials'>Materiais</h3>
               <ul>
                 <li>
                   <Link href={'#'}>Blog</Link>
@@ -72,7 +72,7 @@ const Footer = () => {
             </div>
 
             <div aria-labelledby='social-media'>
-              <h2 id='social-media'>Siga a Leadster</h2>
+              <h3 id='social-media'>Siga a Leadster</h3>
               <div className='social-media'>
                 <a
                   href='https://www.linkedin.com/company/leadster-platform/'

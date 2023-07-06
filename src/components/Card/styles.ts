@@ -3,10 +3,11 @@ import { styled } from 'styled-components';
 export const Container = styled.article`
   display: flex;
   flex-direction: column;
-  height: 280px;
-  width: 100%;
 
   overflow: hidden;
+
+  height: 280px;
+  width: 100%;
 
   border-radius: 0.625rem;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -15,8 +16,10 @@ export const Container = styled.article`
   &:hover figure::before,
   &:hover h2 {
     cursor: pointer;
+
     opacity: 1;
     visibility: visible;
+
     color: ${({ theme }) => theme.colors.secondary};
   }
 
@@ -31,40 +34,44 @@ export const Container = styled.article`
 
     &::before {
       content: '';
+
       display: flex;
       align-items: center;
       justify-content: center;
 
       position: absolute;
 
-      height: 100%;
-      width: 100%;
-
-      transition: all 0.3s linear;
       opacity: 0;
       visibility: hidden;
 
+      height: 100%;
+      width: 100%;
+
       background-color: #00aff03b;
       background: #00aff03b center / 80px url('assets/images/play.png') no-repeat;
+
+      transition: all 0.3s linear;
     }
 
     img {
       display: block;
+
       width: 100%;
       height: 100%;
     }
   }
 
   div {
+    padding: 1rem;
+
     height: 100%;
     width: 100%;
 
-    padding: 1rem;
-
     h2 {
+      color: ${({ theme }) => theme.colors.third};
       font-size: 1rem;
       font-weight: 600;
-      color: ${({ theme }) => theme.colors.third};
+
       transition: all 0.3s linear;
     }
   }

@@ -2,18 +2,22 @@ import { styled } from 'styled-components';
 
 export const Button = styled.button`
   appearance: none;
-  cursor: pointer;
+
   display: inline-block;
+  flex-grow: 1;
+
+  cursor: pointer;
 
   border-radius: 30px;
   border: 1px solid ${({ theme }) => theme.colors.third};
+  padding: 0.6rem 1rem;
+  background-color: transparent;
 
   color: ${({ theme }) => theme.colors.third};
   text-transform: capitalize;
+  white-space: nowrap;
 
   width: fit-content;
-  padding: 0.6rem 1rem;
-  background-color: transparent;
 
   transition: all 0.3s linear;
 

@@ -15,38 +15,52 @@ export const Container = styled.div`
   justify-content: center;
 
   position: fixed;
+  top: 0;
 
   height: 100vh;
   width: 100%;
+
   background-color: rgb(12 100 165 / 20%);
+
   z-index: 1000;
-  top: 0;
 
   &.active {
     display: flex;
+
     animation: ${fadeIn} 0.3s linear;
   }
 
   > dialog {
     width: 100%;
     max-width: 500px;
-    margin: 0 auto;
+
     border-radius: 0.8rem;
+
+    margin: 0 auto;
+
     overflow: hidden;
+
+    @media (min-width: 375px) {
+      width: 90%;
+    }
 
     > .dialog-header {
       display: flex;
       align-items: center;
       justify-content: center;
-      border-top: 4px solid ${({ theme }) => theme.colors.secondary};
+
+      height: 80px;
+
       text-align: center;
-      height: 100px;
+
+      border-top: 4px solid ${({ theme }) => theme.colors.secondary};
       padding: 0.325rem 1rem;
 
       > h2 {
-        width: 28ch;
-        font-size: 1.125rem;
         color: ${({ theme }) => theme.colors.third};
+        font-size: 1rem;
+
+        width: 25ch;
 
         > span {
           color: ${({ theme }) => theme.colors.secondary};
@@ -55,13 +69,17 @@ export const Container = styled.div`
 
       > .close-modal {
         cursor: pointer;
+
         background-color: transparent;
+
         position: absolute;
-        top: 10px;
+        right: 5px;
+        top: 5px;
+
+        padding: 0.125rem;
+
         line-height: 1rem;
         font-size: 1.3rem;
-        right: 15px;
-        padding: 0.325rem;
 
         transition: color 0.3s linear;
 
@@ -70,11 +88,40 @@ export const Container = styled.div`
           color: ${({ theme }) => theme.colors.secondary};
         }
       }
+
+      @media (min-width: 768px) {
+        height: 100px;
+
+        padding: 0.325rem 1rem;
+
+        > h2 {
+          font-size: 1.125rem;
+
+          width: 28ch;
+        }
+
+        > .close-modal {
+          right: 15px;
+          top: 10px;
+
+          padding: 0.325rem;
+        }
+      }
     }
 
     > .dialog-video {
-      height: 300px;
+      height: 160px;
       width: 100%;
+
+      @media (min-width: 500px) {
+        height: 260px;
+        width: 100%;
+      }
+
+      @media (min-width: 768px) {
+        height: 300px;
+        width: 100%;
+      }
     }
 
     > .dialog-content {
@@ -83,14 +130,22 @@ export const Container = styled.div`
       > h3 {
         font-size: 0.9rem;
         color: ${({ theme }) => theme.colors.third};
-        padding-bottom: 0.475rem;
+
         border-bottom: 1px solid #e3e5e9;
+
+        padding-bottom: 0.475rem;
         margin-bottom: 0.325rem;
       }
 
       > p {
-        font-size: 0.9rem;
         color: ${({ theme }) => theme.colors.third};
+        font-size: 0.875rem;
+      }
+
+      @media (min-width: 768px) {
+        > p {
+          font-size: 0.9rem;
+        }
       }
     }
 
@@ -98,29 +153,59 @@ export const Container = styled.div`
       padding: 1rem;
 
       > h3 {
-        font-size: 0.9rem;
         color: ${({ theme }) => theme.colors.third};
-        padding-bottom: 0.475rem;
+        font-size: 0.9rem;
+
         border-bottom: 1px solid #e3e5e9;
+
+        padding-bottom: 0.475rem;
         margin-bottom: 0.325rem;
       }
 
       > div {
         display: flex;
+        flex-wrap: wrap;
         gap: 0.325rem;
+      }
+
+      @media (min-width: 768px) {
+        > div {
+          display: flex;
+          flex-wrap: nowrap;
+        }
       }
     }
   }
 
   > .more-files {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 0.625rem;
+    display: none;
 
-    padding: 1rem;
-    background-color: ${({ theme }) => theme.colors.white};
+    @media (min-width: 768px) {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+
+      width: 380px;
+
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 0.325rem;
+
+      padding: 1rem;
+
+      background-color: ${({ theme }) => theme.colors.white};
+    }
+
+    @media (min-width: 1024px) {
+      gap: 0.625rem;
+    }
+
+    @media (min-width: 1200px) {
+      flex-direction: column;
+      gap: 0.625rem;
+
+      width: fit-content;
+    }
   }
 `;

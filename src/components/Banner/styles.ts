@@ -5,65 +5,127 @@ const threeLines = 'assets/images/asset-header.png';
 export const Container = styled.section`
   display: flex;
   align-items: center;
-  height: 530px;
-  width: 100%;
 
   background-color: ${({ theme }) => theme.colors.primary};
+
+  width: 100%;
+
+  @media (min-width: 375px) {
+    height: 430px;
+  }
+
+  @media (min-width: 768px) {
+    height: 530px;
+  }
 `;
 
 export const Wrapper = styled.div`
-  max-width: 640px;
-  width: 100%;
-
   margin: 0 auto;
+  padding: 0 1rem;
+
+  width: 100%;
 
   text-align: center;
 
-  h1 {
-    font-size: 2.8rem;
-    font-weight: 500;
-    color: ${({ theme }) => theme.colors.third};
+  @media (min-width: 375px) {
+    max-width: fit-content;
 
-    & strong {
-      display: block;
+    > h1 {
+      color: ${({ theme }) => theme.colors.third};
+      font-size: 1.8rem;
+      font-weight: 500;
 
-      position: relative;
+      & > strong {
+        display: block;
 
-      font-size: 4.6rem;
+        position: relative;
 
-      background: linear-gradient(45deg, #2c83fb, #1f76f0);
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
+        font-size: 2.6rem;
+
+        background: linear-gradient(45deg, #2c83fb, #1f76f0);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        &::after {
+          content: '';
+
+          position: absolute;
+          right: 0px;
+          top: 0px;
+
+          height: 26px;
+          width: 26px;
+
+          background: url(${threeLines}) no-repeat center;
+          background-size: contain;
+        }
+      }
 
       &::after {
         content: '';
+        display: block;
 
-        position: absolute;
-        right: 17px;
-        top: 7px;
-
-        height: 40px;
-        width: 40px;
-
-        background: url(${threeLines}) no-repeat center;
-        background-size: contain;
+        margin: 1rem 0;
+        border-bottom: 1px solid #e3e5e9;
       }
     }
 
-    &::after {
-      content: '';
-      display: block;
-
-      margin: 1rem 0;
-
-      border-bottom: 1px solid #e3e5e9;
+    > p {
+      color: ${({ theme }) => theme.colors.third};
+      font-weight: 500;
+      font-size: 0.8rem;
     }
   }
 
-  p {
-    color: ${({ theme }) => theme.colors.third};
-    font-weight: 500;
-    font-size: 1rem;
+  @media (min-width: 400px) {
+    > h1 > strong {
+      &::after {
+        right: 15px;
+        top: 0px;
+      }
+    }
+  }
+
+  @media (min-width: 450px) {
+    > h1 > strong {
+      &::after {
+        right: 35px;
+        top: 0px;
+      }
+    }
+  }
+
+  @media (min-width: 500px) {
+    > h1 > strong {
+      &::after {
+        right: 60px;
+        top: 0px;
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    max-width: 640px;
+
+    > h1 {
+      font-size: 2.8rem;
+
+      & > strong {
+        font-size: 4.6rem;
+
+        &::after {
+          right: 5px;
+          top: 7px;
+
+          height: 40px;
+          width: 40px;
+        }
+      }
+    }
+
+    > p {
+      font-size: 1rem;
+    }
   }
 `;
