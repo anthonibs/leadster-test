@@ -129,8 +129,8 @@ const Home = () => {
               ))
             : Array(9)
                 .fill(9)
-                .map(() => (
-                  <div style={{ display: 'flex', flexDirection: 'column' }}>
+                .map((_, index) => (
+                  <div key={index} style={{ display: 'flex', flexDirection: 'column' }}>
                     <SkeletonCustom count={3} width='100%; 150, 240px' height={'190'} />
                   </div>
                 ))}
