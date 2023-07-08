@@ -14,7 +14,7 @@ Também escolhi utilizar o TypeScript e ferramentas de formatação e padroniza�
 ### 🔗 Acesso a demonstração do projeto
 
 - Você pode acessar o código-fonte do projeto por [baixá-lo](https://github.com/anthonibs/leadster-test/archive/refs/heads/main.zip).
-- URL do site ao vivo: adicione o URL do site ao vivo [aqui]().
+- URL do site ao vivo: adicione o URL do site ao vivo [aqui](https://leadster-test-lilac.vercel.app/).
 
 ### 🎆 Funcionalidades
 
