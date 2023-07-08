@@ -53,7 +53,7 @@ export const Container = styled.article`
       transition: all 0.3s linear;
     }
 
-    img {
+    > img {
       display: block;
 
       width: 100%;

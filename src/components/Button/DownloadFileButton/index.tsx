@@ -1,6 +1,6 @@
-import * as S from './styles';
-
 import { BsCloudDownload } from 'react-icons/bs';
+
+import * as S from './styles';
 
 type FileDownload = 'Spreadsheet.xls' | 'Document.doc' | 'Presentation.ppt' | 'Folder.zip';
 

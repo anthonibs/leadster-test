@@ -4,14 +4,14 @@ import api from '@src/services/api';
 
 import { IVideoPost } from '@src/interfaces/IVideoPost';
 
-import * as S from './styles';
-
 import Banner from '@src/components/Banner';
 import BannerFooter from '@src/components/Banner/BannerFooter';
 import Card from '@src/components/Card';
 import SkeletonCustom from '@src/components/SkeletonCustom';
 import Tags from '../components/Tags';
 import ModalOverlay from '@src/components/ModalOverlay';
+
+import * as S from '../pageStyles/Home/styles';
 
 const Home = () => {
   const [videoPost, setVideoPost] = useState<IVideoPost[]>([]);
@@ -57,7 +57,7 @@ const Home = () => {
     });
   }
 
-  function handleSelectedTag(e: React.MouseEvent<HTMLElement>): void {
+  function handleSelectedTag(e: React.MouseEvent<HTMLButtonElement>): void {
     const target = e.target as HTMLElement;
     const tagValue = target.getAttribute('data-value')?.toLowerCase();
 

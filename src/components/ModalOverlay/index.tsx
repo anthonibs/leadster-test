@@ -1,3 +1,5 @@
+import React, { useCallback, useEffect, useRef } from 'react';
+
 import { IVideoPost } from '@src/interfaces/IVideoPost';
 
 import DownloadFileButton from '../Button/DownloadFileButton';
@@ -5,7 +7,6 @@ import DownloadFileButton from '../Button/DownloadFileButton';
 import { IoCloseOutline } from 'react-icons/io5';
 
 import * as S from './styles';
-import { useEffect, useRef } from 'react';
 
 interface ModalOverlayProps {
   propertyData: IVideoPost;
@@ -16,19 +17,22 @@ interface ModalOverlayProps {
 const ModalOverlay = ({ openModal, setOpenModal, propertyData }: ModalOverlayProps) => {
   const modalRef = useRef<HTMLDivElement>(null);
 
-  function handleOpenModal() {
+  const handleOpenModal = useCallback(() => {
     setOpenModal(!openModal);
-  }
+  }, [openModal, setOpenModal]);
 
-  function handleCloseModal(evt: KeyboardEvent): void {
-    if (!openModal) {
-      return;
-    }
+  const handleCloseModal = useCallback(
+    (evt: KeyboardEvent): void => {
+      if (!openModal) {
+        return;
+      }
 
-    if (evt.code === 'Escape') {
-      setOpenModal(false);
-    }
-  }
+      if (evt.code === 'Escape') {
+        setOpenModal(false);
+      }
+    },
+    [openModal, setOpenModal]
+  );
 
   useEffect(() => {
     document.addEventListener('keydown', handleCloseModal);
@@ -36,7 +40,7 @@ const ModalOverlay = ({ openModal, setOpenModal, propertyData }: ModalOverlayPro
     return () => {
       document.removeEventListener('keydown', handleCloseModal);
     };
-  }, [openModal]);
+  }, [handleCloseModal]);
 
   return (
     <S.Container className={openModal ? 'active' : ''} ref={modalRef}>

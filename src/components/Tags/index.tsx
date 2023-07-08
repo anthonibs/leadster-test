@@ -1,13 +1,15 @@
+import React from 'react';
+
 import { IVideoPost } from '@src/interfaces/IVideoPost';
 
-import * as S from './styles';
-
 import MyButton from '@src/components/Button/MyButton';
+
+import * as S from './styles';
 
 interface TagsProps {
   tags: IVideoPost[];
   selectedTag: string;
-  handleSelectedTag: (e: React.MouseEvent<HTMLElement>) => void;
+  handleSelectedTag: React.MouseEventHandler<HTMLButtonElement>;
 }
 
 const Tags = ({ tags, selectedTag, handleSelectedTag }: TagsProps) => {

@@ -112,7 +112,6 @@ export const SortGroup = styled.div`
     padding: 0.4rem 0.8rem;
 
     line-height: 24px;
-
   }
 `;
 

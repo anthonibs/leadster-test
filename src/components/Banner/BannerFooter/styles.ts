@@ -90,25 +90,30 @@ export const Figure = styled.figure`
   height: 80%;
   width: 100%;
 
+  > img {
+    display: block;
+
+    padding: 2rem;
+
+    height: 100%;
+    width: 100%;
+  }
+
   @media (min-width: 768px) {
     position: relative;
     top: 20px;
 
     height: 100%;
-  }
-`;
 
-export const Image = styled.img`
-  display: block;
+    > img {
+      padding: 0;
 
-  object-fit: contain;
+      object-fit: contain;
+      object-position: right;
 
-  height: 100%;
-  width: 100%;
-
-  @media (min-width: 768px) {
-    object-fit: contain;
-    object-position: right;
+      height: 100%;
+      width: 100%;
+    }
   }
 `;
 
@@ -165,7 +170,7 @@ export const ControlCTA = styled.div`
   figure {
     height: 50px;
 
-    img {
+    > img {
       display: block;
 
       height: 100%;
