@@ -1,0 +1,65 @@
+name: Bump version on main
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  bump-version:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '16'
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Ensure clean working directory
+      run: |
+        git reset --hard HEAD
+        git clean -fd
+        if ! git diff-index --quiet HEAD --; then
+          echo "Error: Git working directory is not clean."
+          exit 1
+        fi
+
+    - name: Determine next version
+      id: version
+      run: |
+        if git log -1 --pretty=%B | grep -q 'scope'; then
+          echo "VERSION_TYPE=major" >> $GITHUB_ENV
+        elif git log -1 --pretty=%B | grep -q 'feat'; then
+          echo "VERSION_TYPE=minor" >> $GITHUB_ENV
+        else
+          echo "VERSION_TYPE=patch" >> $GITHUB_ENV
+        fi
+
+    - name: Debug Define version
+      run: echo "VERSION_TYPE=${{ env.VERSION_TYPE }}"
+
+    - name: Configure Git remote URL
+      env:
+        GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}  # Use the GitHub token with appropriate permissions
+      run: |
+        git remote set-url origin https://github.com/anthonibs/leadster-test.git
+        echo "GITHUB_TOKEN": ${GITHUB_TOKEN}
+
+
+    - name: Debug git configuration
+      run: |
+        git remote -v
+        git config --list
+
+    - name: Bump version and push changes
+      run: |
+        git config --global user.name "Anthoni"
+        git config --global user.email "actions@github.com"
+        npm version ${{ env.VERSION_TYPE }} -m "chore(release): bump version to %s"
+        git push origin HEAD:main --follow-tags
